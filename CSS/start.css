@@ -1,0 +1,37 @@
+/* The video container will be used to position the video */
+.video-container {
+    position: absolute; /* Make sure it's positioned to cover the entire screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevent overflow of the video */
+}
+
+/* The video will cover the entire section and stretch across the screen */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video stretches to fill the screen without distortion */
+    z-index: -1; /* Ensures the video stays behind the content */
+}
+
+/* The overlay adds a darkened, faded effect */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 0; /* Ensures the overlay stays just above the video */
+}
+
+/* Content stays above the video and overlay */
+.content {
+    position: relative;
+    z-index: 1; /* Keeps the content on top of the overlay */
+}

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../Images/Studio-Project (6).png">
+    <title>Dental Garden | Home</title>
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/hmTreat.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            background: linear-gradient(rgb(91, 7, 94), rgb(161, 57, 165));
+            /* border-radius: 50px; */
+            overflow: hidden;
+            width: 100%;
+            max-width: 1600px;
+            align-items: center;
+            margin: auto;
+            box-shadow: 5px 5px 15px rgba(42, 1, 58, 0.8);
+        }
+        
+        .text-area,
+        .slideshow {
+            flex: 1;
+            padding-right: 20px;
+            box-sizing: border-box;
+            margin-right: 50px;
+        }
+
+        .text-area {
+            text-align: justify;
+            color: white;
+            padding-left: 20px;
+            margin-left: 50px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .slides {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+            margin: 35px;
+        }
+
+        .slides img {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+
+        .slides img.active {
+            display: block;
+        }
+
+        .nav-button {
+            position: absolute;
+            top: 40%;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            border: none;
+            padding: 10px;
+            cursor: none;
+            font-size: 20px;
+            z-index: 1;
+            width: 50px;
+            transition: .2s ease;
+        }
+
+        .nav-button:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            transition: .2s ease;
+            transform: scale(1.2);
+            border: none;
+        }
+
+        .prev {
+            left: 1px;
+            cursor: none;
+        }
+
+        .next {
+            right: -50px;
+            cursor: none;
+        }
+
+        .slideshow {
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                width: 90%;
+            }
+        }
+        h6{
+            font-size: 15px;
+        }
+        h5{
+            font-size: 20px;
+        }
+    </style>
+
+
+<!-- **************************************VIDEO********************************************** -->
+    <style>
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    border-bottom-left-radius: 85px;
+    border-bottom-right-radius: 85px;
+}
+
+#myVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -1;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 68, 61, 0.5); /* Semi-transparent black overlay */
+    z-index: 0;
+}
+
+.typeText-container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+    /* text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); */
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 75px;
+    z-index: 1;
+}
+
+span {
+    color: rgb(243, 127, 247);
+    z-index: 1;
+}
+
+
+
+    </style>
+
+    <style>
+        .menu-icon {
+    color: white;
+    /* filter: drop-shadow(0 0 3px white); */
+    position: relative;
+    /* top: 10px; */
+    display: none;
+  }
+  
+  @media (max-width: 767px) {
+    .menu-icon {
+      display: inline;
+    }
+  }
+    </style>
+    <!-- ======================================main========================================= -->
+</head>
+<body>
+    <header>
+        <a href="start.html" class="brand"><img src="../Images/Asset 2.png" width="180"></a>
+        <div class="menu-btn">
+            <ion-icon name="menu-outline" class="menu-icon" style="color: white; position: relative; top: 5px;"></ion-icon>
+        </div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="home.html">Home</a>
+                <a href="about2.html">Our Team</a>
+                <a href="aboutFin.html">About</a>
+                <a href="treatments.html">Treatments</a>
+                <a href="NewsPage.html">News</a>
+                <a href="gallery2.html">Gallery</a>
+                <a href="contact2.html">Contact Us</a>
+                <button type="button" onclick="location.href='https://www.corepractice.is/practices/dentalgarden/hunters-hill#/'"><span></span>
+                    Book Online
+                </button>
+            </div>
+        </div>
+    </header>
+<br>
+    <section class="home">
+        <div class="typeText-wrapper">
+            <div class="typeText-container">
+                <!-- <div class="video-background">
+                    <video autoplay muted loop id="myVideo">
+                        <source src="../Videos/B759A1FF-6EBF-4E1A-861D-2BC10F4C61500226_154019 (1).mp4" type="video/mp4">
+                        Your browser does not support this video.
+                    </video>
+                    <div class="video-overlay"></div>
+                </div> -->
+                <h1><span class="auto-type"></span></h1>
+            </div>
+            <p align="center" style="color: rgb(71, 9, 75);">See availability below.</p>
+        </div>
+
+        <div class="content">
+            <!-- <h1>Trust Us To Brighten<br><span>Your Smile</span></h1>
+            <p>Nervous about visiting the dentist? No problem! Talk to the dentist in our private consultation room away from all the distractions of the treatment room so we can focus on creating the best plan for your care.</p>
+            <button type="button" onclick="location.href='https://www.corepractice.is/practices/dentalgarden/hunters-hill#/'"><span></span>
+                Book Today
+            </button>
+            <a href="contact2.html">
+                <button type="button"><span></span>
+                Location
+            </button></a>
+            <a href="about2.html">
+                <button type="button"><span></span>
+                More info
+            </button></a> -->
+        </div>
+    </section>
+        <!-- Inserted Container with Information and Slideshow -->
+        <div class="container">
+            <div class="text-area">
+                <h5>FREE PARKING</h5>
+                <p>
+                    <br> - All day parking on Princes St
+                    <br> - 2 hour parking in the laneway carpark behind the shops off Princes Street
+                    <br> - Park at Harris Farm across Pittwater Road
+                    <br><br> <h5>Opening Hours</h5>
+                    <br> <h6>Mon</h6> 
+                     08:00 am – 04:00 pm
+                    <br> <h6>Tue</h6>
+                     08:00 am – 04:00 pm
+                    <br> <h6>Wed</h6>
+                     09:00 am – 06:00 pm
+                    <br> <h6>Thu</h6>
+                     11:00 am – 07:00 pm
+                    <br> <h6>Fri</h6>
+                     08:00 am – 04:00 pm
+                    <br> <h6>Sat</h6>
+                     08:00 am – 05:00 pm
+                    <br> <h6>Sun</h6>
+                     By Appointment
+                </p>
+            </div>
+            <div class="slideshow">
+                <div class="slides">
+                    <img src="../Images/homePage-slides/1.jpg" alt="Slide 1" class="active" />
+                    <img src="../Images/homePage-slides/2.jpg" alt="Slide 2" />
+                    <img src="../Images/homePage-slides/3.jpg" alt="Slide 3" />
+                    <img src="../Images/homePage-slides/4.jpg" alt="Slide 4" />
+                    <img src="../Images/homePage-slides/5.jpg" alt="Slide 5" />
+                    <img src="../Images/homePage-slides/6.jpg" alt="Slide 6" />
+                    <img src="../Images/homePage-slides/7.jpg" alt="Slide 7" />
+                </div>
+                <button class="nav-button prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="nav-button next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </div>
+    <br><br>
+        <!-- Footer Links -->
+        <div align="center" class="dg-image2">
+            <img src="../Images/Asset 2.png" alt="" width="200">
+        </div>
+        <div align="center" class="icons-footer">
+            <a class="social-icon-i" href="https://www.instagram.com/francesthedentist" target="_blank">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a class="social-icon-f" href="https://www.facebook.com/francesthedentist/" target="_blank">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a class="social-icon-y" href="https://www.youtube.com/channel/UCmx6kEdrW-KPFR9FrxO0pHA" target="_blank">
+                <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+        </div>
+        <div class="copyright-container">
+            <p>Copyright © 2024 Dental Garden - All Rights Reserved.</p>
+        </div>
+
+            <!-- Automatic typing text -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ["I think I grind my teeth at night.", "I hate how my teeth look in pictures.", "Food keeps getting stuck between my teeth.", "My bite feels weird.", "I haven’t seen the dentist in a while.", "My gums keep bleeding.", "I wish my smile was straighter.", "I need to whiten my teeth.", "It hurts when I eat.", "Why does my tooth ache when it’s cold?"],
+            typeSpeed: 120,
+            backSpeed: 50,
+            loop: true
+        });
+    </script>
+
+    <!-- Circle animation for mouse cursor -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    <script src="../JS/cursor.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Slideshow Script -->
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slides img');
+
+        showSlides(); // Initial call to show slides
+        let slideInterval = setInterval(nextSlide, 20000); // Auto transition every 20 seconds
+
+        function showSlides() {
+            slides.forEach((slide) => {
+                slide.classList.remove('active');
+            });
+
+            slides[slideIndex].classList.add('active');
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+            showSlides();
+        }
+
+        function changeSlide(n) {
+            slideIndex += n;
+            if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            } else if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+            showSlides();
+        }
+    </script>
+
+        <!-- Responsive navigation menu -->
+        <script type="text/javascript">
+            const menuBtn = document.querySelector(".menu-btn");
+            const navigation = document.querySelector(".navigation");
+    
+            menuBtn.addEventListener("click", () => {
+                menuBtn.classList.toggle("active");
+                navigation.classList.toggle("active");
+            });
+        </script>
+
+</body>
+</html>
