@@ -17,7 +17,7 @@
         /* This enables smooth scrolling across the entire page */
         html {
             scroll-behavior: smooth;
-            background:#14615d;
+            background: linear-gradient(#07413e, #239e98, #43cec7);
         }
 
         /* Style for content */
@@ -135,7 +135,7 @@
         }
 
         .image-box {
-            background-color: #084b47;
+            background-color: #53b6af;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             overflow: hidden;
@@ -158,14 +158,14 @@
 
         .content-box h3 {
             font-size: 1.6em;
-            color: #69e4de;
+            color: #003532;
             margin-bottom: 10px;
             font-weight: 600;
             transition: .3s ease;
         }
 
         .content-box p {
-            color: #69e4de;
+            color: #003532;
             font-size: 1.1em;
             line-height: 1.6;
             transition: .3s ease;
@@ -211,6 +211,133 @@
             }
             }
     </style>
+    
+    <style>
+  /* Cards grid container */
+.cards-container {
+  max-width: 1500px;
+  margin: 120px auto 40px auto; /* top margin added */
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+
+  /* Each card */
+  .card {
+    background-color: #053634;
+    border-radius: 1.15rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: #69e4de;
+    transition: transform 0.3s ease;
+    align-self: start;
+  }
+
+  .card:hover {
+    transform: translateY(-10px);
+    border-radius: 1.5rem;
+  }
+
+  /* Circular images */
+  .card img {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    object-fit: cover;
+    border: 2px solid #fffffff1;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .card img:hover {
+    transform: scale(1.08);
+  }
+
+  /* Heading */
+  .card h3 {
+    font-size: 1.6em;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #69e4de;
+    transition: .3s ease;
+  }
+
+  .card h3:hover {
+    transform: skewX(-10deg);
+  }
+
+  /* Paragraph text initially hidden */
+  .card p {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin: 0;
+    font-size: 0.9em;
+    line-height: 1.6;
+    transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
+  }
+
+  /* Paragraph text when visible */
+  .card p.expanded {
+    max-height: 300px;
+    opacity: 1;
+    margin-top: 15px;
+  }
+
+  /* Toggle link style */
+  .toggle-link {
+    margin-top: 12px;
+    color: hsl(288, 100%, 76%);
+    cursor: none;
+    font-size: 1em;
+    text-decoration: underline;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    user-select: none;
+    text-decoration: none;
+  }
+
+  /* .toggle-link:focus {
+    outline: 2px solid #a300cc;
+    outline-offset: 2px;
+  } */
+
+  /* Arrow icon for toggle */
+  .toggle-arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+  }
+
+  .toggle-arrow.expanded {
+    transform: rotate(180deg);
+    text-decoration: none;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .card img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .card img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+</style>
+
 
 </head>
 <body>
@@ -236,84 +363,84 @@
         </div>
     </header>
 
-    <!-- <section class="home">
-        <div class="content">
-            <h1>About Us<br><span>Our Practice</span></h1>
-            <p>something</p>
-        </div>   
-    </section> -->
 
-    <!-- New section for the image and text boxes -->
-    <section class="image-box-section">
-        <h2 style='text-align:center; color: #69e4de; font-size: 2em; font-weight: 600; margin-top: 20px; font-family: "Poppins", Arial, Helvetica, sans-serif;'>ABOUT OUR PRACTICE</h2>
-        <div class="image-box-container">
-            <div class="image-box">
-                <img src="../Images/ourPractice/1.webp" alt="Image 1">
-                <div class="content-box">
-                    <h3>Philosophy</h3>
-                    <p> We recognise and pay respect to the Elders and communities – past, present, and emerging – of traditional lands of the Wallumedegal people of the Eora Nation.
-                        “Always was,
-                        Always will be.” 
-                    <br><br>
-                        At Dental Garden, we focus on providing a serene and caring environment for our patients, ensuring that every visit is comfortable and stress-free. Our philosophy emphasises tranquillity, comprehensive and gentle dental care, and clinical excellence. We are dedicated to eco-friendly practices, maintaining high standards of integrity, and using evidence-based dentistry to stay current with the latest advancements in dental science. By combining these values, we aim to offer the best possible dental care experience. Welcome to Dental Garden, where your smile is our priority. </p>
-                </div>
-            </div>
+<!-- Enhanced Cards Section -->
+<section class="cards-container" aria-label="Information cards with expandable details">
+    <h1 align="center">ABOUT OUR CLINIC</h1>
+  <article class="card">
+    <img src="../Images/ourPractice/1.webp" alt="Philosophy - Dental Garden" />
+    <h3>Philosophy</h3>
+    <a href="#" class="toggle-link" aria-expanded="false" role="button" tabindex="0" aria-controls="card1-desc" onclick="toggleText(event)">
+      See more
+      <span class="toggle-arrow" aria-hidden="true">&#x25BC;</span>
+    </a>
+    <p id="card1-desc" class="collapsed" hidden>
+       At Dental Garden, we are committed to creating a serene and welcoming environment where every visit feels calm and stress-free. Our philosophy blends gentle, comprehensive care with clinical excellence and eco-friendly practices. With a strong focus on integrity and evidence-based dentistry, we strive to deliver the highest standard of treatment. Welcome to Dental Garden, where your comfort and smile come first.
 
-            <div class="image-box">
-                <img src="../Images/ourPractice/2.PNG" alt="Image 2">
-                <div class="content-box">
-                    <h3>Community</h3>
-                    <p>At Dental Garden, we believe in giving back to our community and making a positive impact. 
+  </p>
+  </article>
+
+  <article class="card">
+    <img src="../Images/ourPractice/2.PNG" alt="Community - Dental Garden" />
+    <h3>Community</h3>
+    <a href="#" class="toggle-link" aria-expanded="false" role="button" tabindex="0" aria-controls="card2-desc" onclick="toggleText(event)">
+      See more
+      <span class="toggle-arrow" aria-hidden="true">&#x25BC;</span>
+    </a>
+    <p id="card2-desc" class="collapsed" hidden>
+     At Dental Garden, we’re passionate about giving back to the community. Led by Dr Frances Ershad, our team supports Filling the Gap by volunteering pro bono dental care to those in need. We also proudly contribute to local causes, including Boronia Park Public School and the Gladesville Ravens Women’s Football Team. Through these efforts, we aim to promote education, healthy living, and meaningful connections—because creating smiles goes beyond dentistry.
 
 
+    </p>
+  </article>
 
-                        We are proud of our altruistic approach to dentistry. Our team, led by Dr Frances Ershad, donates their time to the Filling the Gap charity, providing pro bono dental treatment to those in need. 
-                        
-                        
-                        
-                        We are also proud to support local organizations. Dental Garden has donated vouchers for charity auctions at Boronia Park Public School and the Gladesville Ravens Women’s Football Team.  We are dedicated to supporting local education and fostering healthy lifestyles within our community. At Dental Garden, we serve with care, integrity, and excellence. Together, we aren't just creating smiles, but making a meaningful difference in the lives of those around us. </p>
-                </div>
-            </div>
+  <article class="card">
+    <img src="../Images/ourPractice/3.webp" alt="Technology - Dental Garden" />
+    <h3>Technology</h3>
+    <a href="#" class="toggle-link" aria-expanded="false" role="button" tabindex="0" aria-controls="card3-desc" onclick="toggleText(event)">
+      See more
+      <span class="toggle-arrow" aria-hidden="true">&#x25BC;</span>
+    </a>
+    <p id="card3-desc" class="collapsed" hidden>
+   At Dental Garden, we use cutting-edge technology to improve diagnosis, treatment, and comfort. From 3D imaging and low-radiation digital X-rays to same-day CEREC crowns, our tools ensure efficient, high-quality care. Ceiling-mounted TVs add a touch of relaxation—because your comfort matters as much as your smile.  </p>
+  </article>
 
-            <div class="image-box">
-                <img src="../Images/ourPractice/3.webp" alt="Image 3">
-                <div class="content-box">
-                    <h3>Technology</h3>
-                    <p>At Dental Garden, we use advanced technology to improve patient care and comfort. Our tools include Cone Beam CT and OPG, which provide detailed 3D images of teeth and bones for precise diagnoses, and digital radiography, offering X-rays with up to 90% less radiation than traditional ones, providing clear, instant images. We also utilise digital photography to capture high-quality images of teeth and gums to track progress and share results. Our CEREC system allows us to create custom crowns in a single visit with 3D scanning and milling. For added comfort, we have installed televisions on the ceilings of our treatment rooms, so you can enjoy your favourite shows during treatments. We believe that investing in technology enhances our patients' health and comfort at Dental Garden. 
+  <article class="card">
+    <img src="../Images/ourPractice/4.PNG" alt="Children - Dental Garden" />
+    <h3>Children</h3>
+    <a href="#" class="toggle-link" aria-expanded="false" role="button" tabindex="0" aria-controls="card4-desc" onclick="toggleText(event)">
+      See more
+      <span class="toggle-arrow" aria-hidden="true">&#x25BC;</span>
+    </a>
+    <p id="card4-desc" class="collapsed" hidden>
+At Dental Garden, we make dental visits fun and comforting for kids. With ceiling TVs, take-home toys, treatment flavour options, and sensory tools for anxious children, we create a child-friendly space. Early hours and weekend appointments help fit your schedule. Our goal is to deliver great care and lasting positive memories.   </p>
+  </article>
 
-                    </p>
-                </div>
-            </div>
+  <article class="card">
+    <img src="../Images/ourPractice/5.webp" alt="Anxious Patients - Dental Garden" />
+    <h3>Anxious Patients</h3>
+    <a href="#" class="toggle-link" aria-expanded="false" role="button" tabindex="0" aria-controls="card5-desc" onclick="toggleText(event)">
+      See more
+      <span class="toggle-arrow" aria-hidden="true">&#x25BC;</span>
+    </a>
+    <p id="card5-desc" class="collapsed" hidden>
+    At Dental Garden, we make visits calm and stress-free with gentle, tailored care—no sedation needed. Learn more through our website, videos, and resources from the ADA and Beyond Blue. Ready to smile? Call us at 02 9363 9190 or email admin@dentalgarden.com.au—we’re here to help! </p>
+  </article>
 
-            <div class="image-box">
-                <img src="../Images/ourPractice/4.PNG" alt="Image 4">
-                <div class="content-box">
-                    <h3>Children</h3>
-                    <p> At Dental Garden, we create a fun, child-friendly environment to ensure our youngest patients feel seen, heard, and cared for. Our treatment rooms have ceiling-mounted TVs, allowing kids to watch their favourite cartoons during visits, helping them feel relaxed. Each child receives a toy to take home, building positive associations with dental visits. We offer various flavours for treatments and provide sensory toys for anxious children. To accommodate busy schedules, we open at 8:00 AM and offer weekend appointments. Our goal is to provide excellent dental care and form positive experiences for children that last a lifetime. </p>
-                </div>
-            </div>
+  <article class="card">
+    <img src="../Images/ourPractice/6.webp" alt="Seniors - Dental Garden" />
+    <h3>Seniors</h3>
+    <a href="#" class="toggle-link" aria-expanded="false" role="button" tabindex="0" aria-controls="card6-desc" onclick="toggleText(event)">
+      See more
+      <span class="toggle-arrow" aria-hidden="true">&#x25BC;</span>
+    </a>
+    <p id="card6-desc" class="collapsed" hidden>
+    At Dental Garden, we care for the unique dental needs of seniors with compassion and expertise. Seniors and pensioners receive 10% off all services, including gentle extractions, tooth replacement options like dentures, bridges, and implants, and full gum care. We’re here to support healthy smiles at every age in a warm, welcoming space. </p>
+  </article>
+<p style="color: hsl(177, 100%, 85%); transform: skewX(-2.5deg);">We acknowledge the Traditional Custodians of the land on which Dental Garden stands, the Wallumedegal Aboriginal clan of the Eora Nation. We pay our deepest respects to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples. We honour their enduring connection to land, culture, and community.
 
-            <div class="image-box">
-                <img src="../Images/ourPractice/5.webp" alt="Image 5">
-                <div class="content-box">
-                    <h3>Anxious Patients</h3>
-                    <p> We aim to make dental visits comfortable and stress-free, using cognitive calming techniques to minimise anxiety. Our dedicated team tailors care to your needs, ensuring a positive experience without sedation or general anesthesia. Explore our website and videos to learn more, and find additional resources on dental anxiety from the Australian Dental Association and Beyond Blue. We look forward to transforming your smile at Dental Garden – where beautiful smiles grow. 
-
-
-
-                        You can reach us at - 02 9363 9190 or via email at admin@dentalgarden.com.au - We’re always here to answer any questions you may have or to schedule an appointment</p>
-                </div>
-            </div>
-
-            <div class="image-box">
-                <img src="../Images/ourPractice/6.webp" alt="Image 6">
-                <div class="content-box">
-                    <h3>Seniors</h3>
-                    <p> At Dental Garden, we prioritize the unique dental needs of our senior patients by offering comprehensive and compassionate care. To show our appreciation, we provide a 10% discount on all dental services for seniors and pensioners. Our treatments include safe and comfortable tooth extractions, various options for replacing missing teeth such as dentures, bridges, and dental implants, and comprehensive periodontal care to maintain gum health. We are committed to delivering the highest standard of care in a welcoming environment, helping seniors maintain healthy smiles at every stage of life. </p>
-                </div>
-            </div>
-        </div>
-    </section>
+</p>
+</section>
 
         <!-- .................................Footer Links................................... -->
     
@@ -364,6 +491,46 @@
             navigation.classList.toggle("active");
         });
     </script>
+
+    <script>
+  function toggleText(event) {
+    event.preventDefault();
+    const toggleLink = event.currentTarget;
+    const paragraphId = toggleLink.getAttribute("aria-controls");
+    const paragraph = document.getElementById(paragraphId);
+    const isExpanded = toggleLink.getAttribute("aria-expanded") === "true";
+
+    if (isExpanded) {
+      // Collapse paragraph
+      paragraph.hidden = true;
+      paragraph.classList.remove("expanded");
+      toggleLink.setAttribute("aria-expanded", "false");
+      toggleLink.querySelector(".toggle-arrow").classList.remove("expanded");
+      toggleLink.firstChild.textContent = "See more";
+    } else {
+      // Expand paragraph
+      paragraph.hidden = false;
+      // Use setTimeout to allow reflow before adding class for transition
+      setTimeout(() => {
+        paragraph.classList.add("expanded");
+      }, 10);
+      toggleLink.setAttribute("aria-expanded", "true");
+      toggleLink.querySelector(".toggle-arrow").classList.add("expanded");
+      toggleLink.firstChild.textContent = "See less";
+    }
+  }
+
+  // Optional: Enable keyboard accessibility with Enter/Space key
+  document.querySelectorAll('.toggle-link').forEach(link => {
+    link.addEventListener('keydown', e => {
+      if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") {
+        e.preventDefault();
+        link.click();
+      }
+    });
+  });
+</script>
+
 
         <!-- Circle animation for mouse cursor -->
         <div class="circle"></div>
