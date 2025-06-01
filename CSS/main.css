@@ -22,7 +22,7 @@ header{
 }
 
 header .brand{
-    color: #14615d;
+    color: #023835;
     font-size: 1.5em;
     font-weight: 700;
     text-transform: uppercase;
@@ -78,7 +78,7 @@ section{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background: #14615d;
+    background: linear-gradient(#07413e, #239e98, #43cec7);
     /* background: linear-gradient(#006650, #1a947a, #76d4c0); */
 }
 
@@ -241,7 +241,8 @@ button:hover span{
 
     header .navigation.active .navigation-items{
         /* background:linear-gradient(#1eb191, #097960); */
-        background: #14615d;
+        /* background: linear-gradient(#07413e, #239e98, #43cec7); */
+        background: linear-gradient(#035858, #ec77f7);
         width: 600px;
         max-width: 600px;
         margin: 20px;
@@ -293,10 +294,11 @@ body {
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background-color: rgb(0, 46, 41);
+    background-color: rgb(152, 255, 243);
     pointer-events: none; /* Allow clicks to pass through */
     z-index: 9999; /* Make sure it's on top of other elements */
     transition: transform 0.1s ease-out;
+    box-shadow: #002c2b 2px;
   }
 
 /* .......................socialmedia icons....................... */
