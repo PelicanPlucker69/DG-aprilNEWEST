@@ -1,4 +1,5 @@
         /* Add any additional styles here */
+
         .treatment-cards {
             display: flex;
             flex-wrap: wrap;
@@ -143,11 +144,11 @@
 :root {
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(276, 84%, 25%);
-  --title-color: hsl(0, 0%, 15%);
-  --text-color: hsl(0, 0%, 35%);
+  --first-color: hsl(288, 100%, 76%);
+  --title-color: #fff;
+  --text-color: #69e4de;
   --body-color: #064946;
-  --container-color: hsl(0, 0%, 100%);
+  --container-color: #14615d;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -204,13 +205,18 @@ img {
 }
 
 .card__article:hover{
-  transform: scale(1.08);
+  transform: scale(1.06);
   transition: .3s ease;
 }
 
 .card__img {
   width: 328px;
-  border-radius: 1.5rem;
+  border-radius: 20px;
+  border: 2px solid var(--text-color);
+}
+
+.card__img::after{
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
 }
 
 .card__data {
@@ -232,7 +238,7 @@ img {
   display: block;
   font-size: var(--small-font-size);
   margin-bottom: .25rem;
-  color: #79288a;
+  color: #e046ff;
 }
 
 .card__title {
@@ -275,6 +281,7 @@ img {
 
 div.ex3 {
   background-color: rgb(2, 80, 69);
+  border-radius: 1.15rem;
   width: 600px;
   height: 700px;
   overflow: auto;
@@ -326,6 +333,7 @@ div.ex3 p {
   font-weight: 400;
   will-change: transform; 
   transform: translateZ(0); 
+  padding-right: 85px;
 }
 
 /* Card animation */
@@ -430,7 +438,7 @@ div.ex3 {
     height: 750px; /* Fixed height to enable internal scrolling */
     overflow-y: scroll; /* Enable vertical scrolling within the box */
     overflow-x: hidden; /* Prevent horizontal scrolling */
-    padding: 15px; /* Add padding for comfort */
+    padding: 20px; /* Add padding for comfort */
     margin: 0 auto; /* Center horizontally */
     transition: 0.3s ease;
     scrollbar-width: none; /* Hide scrollbar */
@@ -456,7 +464,7 @@ div.ex3 {
   /* Mobile-specific styles */
   @media (max-width: 768px) {
     div.ex3 {
-      width: calc(100% - 20px); /* Stretch close to edges, leaving a small margin */
+      width: 140%; /* Stretch close to edges, leaving a small margin */
       padding: 10px; /* Compact padding */
       margin: 0 auto; /* Fully centered */
     }
@@ -473,9 +481,22 @@ div.ex3 {
   /* Desktop-specific styles */
   @media (min-width: 769px) {
     div.ex3 {
-      width: 60%; /* Slightly narrower for desktop */
-      margin-left: 5%; /* Move further left */
+      width: 100%; /* Slightly narrower for desktop */
+      margin-left: 0%; /* Move further left */
       padding: 20px; /* Increase padding */
     }
+  }
+  
+
+  .card__extra-text {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    margin-top: 0.5rem;
+    color: #fff;
+  }
+  
+  .card__data.expanded .card__extra-text {
+    max-height: 300px; /* Adjust based on content */
   }
   
