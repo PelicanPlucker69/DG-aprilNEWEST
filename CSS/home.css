@@ -44,7 +44,7 @@ header .navigation{
 
 header .navigation .navigation-items a{ 
     position: relative;
-    color: #ffffff;
+    color: rgb(247, 154, 250);
     font-size: 1em;
     font-weight: 500;
     text-decoration: none;
@@ -242,7 +242,7 @@ button:hover span{
 
     header .navigation.active .navigation-items{
         /* background:linear-gradient(#1eb191, #097960); */
-        background: #982ba1;
+        background: linear-gradient(#610564, #b21cb8, #ec77f7);
         width: 600px;
         max-width: 600px;
         margin: 20px;
@@ -294,7 +294,7 @@ body {
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background-color: rgb(66, 0, 68);
+    background-color: rgb(60, 0, 61);
     pointer-events: none; /* Allow clicks to pass through */
     z-index: 9999; /* Make sure it's on top of other elements */
     transition: transform 0.1s ease-out;
