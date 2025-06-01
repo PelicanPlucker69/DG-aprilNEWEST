@@ -44,7 +44,7 @@
                 <h1>News<br><span>Latest Updates</span></h1>
                 <div class="ex3">
                     <h3>Elevating Our Care: Exclusive Training at Dental Garden by C & L Dental Education Consultants</h3>
-                    <div class="ex3" ><p>At Dental Garden, we're dedicated to providing our patients with unparalleled dental care. As part of our ongoing commitment to excellence, we recently had the privilege of hosting a special training session led by the renowned C & L Dental Education Consultants, who also educate at the Australian Dental Association (ADA).
+                    <div class="ex3"><p>At Dental Garden, we're dedicated to providing our patients with unparalleled dental care. As part of our ongoing commitment to excellence, we recently had the privilege of hosting a special training session led by the renowned C & L Dental Education Consultants, who also educate at the Australian Dental Association (ADA).
                         <br><br>
                         On Wednesday, 19th February, our team was excited to welcome the consultants to our practice for tailored training on two essential topics: Four-Handed Dentistry and Infection Prevention and Control. The expertise and insights shared by the consultants were truly invaluable, offering practical techniques that enhance both the efficiency of our practice and the safety of our patients.
                         <br><br>
@@ -66,16 +66,20 @@
     </section>
 
     <div class="container">
+        <p>Click on images and 'read more' to reveal more information.</p><br><br>
         <div class="card__container">
-           <article class="card__article">
-              <img src="../Images/News/STA.jpg" alt="image" class="card__img">
-
-              <div class="card__data">
-                 <span class="card__description">Dental Garden</span>
-                 <h2 class="card__title">Painless Single Tooth Anaesthesia with STA Wand</h2>
-                 <a href="#" class="card__button">Read More</a>
-              </div>
-           </article>
+            <article class="card__article">
+                <img src="../Images/News/STA.jpg" alt="image" class="card__img">
+                <div class="card__data">
+                  <span class="card__description">Dental Garden</span>
+                  <h2 class="card__title">Painless Single Tooth Anaesthesia with STA Wand</h2>
+                  <a href="#" class="card__button">Read More</a>
+                  <div class="card__extra-text">
+                    <p>This new technology allows us to deliver anaesthesia more comfortably, improving your dental visit experience.</p>
+                  </div>
+                </div>
+              </article>
+              
 
            <article class="card__article">
               <img src="../Images/News/medicare-logo.JPG" alt="image" class="card__img">
@@ -84,6 +88,8 @@
                  <span class="card__description">Dental Garden</span>
                  <h2 class="card__title">Bulk Billing at Dental Garden</h2>
                  <a href="#" class="card__button">Read More</a>
+                 <div class="card__extra-text">
+                    <p>We now offer bulk billing for eligible patients under Medicare's Child Dental Benefits Schedule (CDBS), making quality dental care more accessible for families and young patients.       </div>
               </div>
            </article>
 
@@ -94,6 +100,9 @@
                  <span class="card__description">Dental Garden</span>
                  <h2 class="card__title">Dental Garden’s Dental Rescue Day for Disadvantaged Australians</h2>
                  <a href="#" class="card__button">Read More</a>
+                 <div class="card__extra-text">
+                    <p>Our Dental Rescue Day provided free treatments to those in need, supported by the Australian Dental Health Foundation. It's part of our mission to give back to the community through compassionate care.</p>
+                </div>
               </div>
            </article>
 
@@ -105,6 +114,9 @@
                <h2 class="card__title">Medical Emergencies Training at Dental Garden
             </h2>
                <a href="#" class="card__button">Read More</a>
+               <div class="card__extra-text">
+                <p>Our team participated in advanced medical emergency training to ensure quick, safe responses during any in-practice emergencies. Patient safety remains our top priority in every scenario.</p>
+            </div>
             </div>
          </article>
 
@@ -115,6 +127,9 @@
                <span class="card__description">Dental Garden</span>
                <h2 class="card__title">Filling the Gap</h2>
                <a href="#" class="card__button">Read More</a>
+               <div class="card__extra-text">
+                <p>We proudly partner with Filling the Gap to provide pro bono care for Australians who face barriers to dental treatment. It's part of our continued effort to support dental equality.</p>
+            </div>
             </div>
          </article>
 
@@ -125,11 +140,14 @@
                <span class="card__description">Dental Garden</span>
                <h2 class="card__title">Research Spotlight</h2>
                <a href="#" class="card__button">Read More</a>
+               <div class="card__extra-text">
+                <p>We regularly participate in research to stay at the forefront of dental innovation. Our latest collaboration explores minimally invasive techniques that improve outcomes and healing times.</p>
+            </div>
             </div>
          </article>
         </div>
      </div>
-     <br><br><br><br><br>
+     <br><br><br><br><br><br><br><br><br><br>
 
     <!-- .................................Footer Links................................... -->
     
@@ -180,6 +198,18 @@
                 navigation.classList.toggle("active");
             });
         </script>
+
+<script>
+    document.querySelectorAll('.card__button').forEach(button => {
+      button.addEventListener('click', e => {
+        e.preventDefault();
+        const cardData = button.closest('.card__data');
+        cardData.classList.toggle('expanded');
+        button.textContent = cardData.classList.contains('expanded') ? 'Read Less' : 'Read More';
+      });
+    });
+  </script>
+  
 
   </body>
   </html>
