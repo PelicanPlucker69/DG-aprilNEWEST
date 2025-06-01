@@ -49,9 +49,9 @@
         }
     
         .treatment-card1, .treatment-card2, .treatment-card3 ,.core-value-card {
-            background: #053634;
+            background: #0b524f;
             padding: 20px;
-            /* border-radius: 20px; */
+            border-radius: 20px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             width: 300px;
             text-align: center;
@@ -79,10 +79,10 @@
         }
     
         .testimonial1, .testimonial2, .testimonial3 {
-            background: #e0f7fa;
+            background: #0b524f;
             padding: 25px;
-            border-radius: 30px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
             margin: 30px 0;
             text-align: center;
             transition: transform 0.3s; /* Add transition for smooth scaling */
@@ -206,9 +206,21 @@ display: none;
 
     <section class="home">
         <div class="content-right">
+    <div class="testimonials">
+        <h2 align="center">Treatment Disclaimer</h2>
+        <div class="testimonial1">
+            <p style="color: #c9fffc;">At Dental Garden, we’re committed to providing high-quality dental care, with personalised treatment plans tailored to your unique needs. </p>
+        </div>
+        <div class="testimonial2">
+            <p style="color: #c9fffc;">While we aim for the best outcomes, individual results may vary, and ongoing care and informed decisions are key to long-term dental health.</p>
+        </div>
+        <div class="testimonial3">
+            <p style="color: #c9fffc;">Note: This disclaimer serves as general information and does not replace professional advice. Always consult our dental experts for personalized guidance.</p>
+        </div>
+    </div>
             <div class="content">
-                <h1>Our<br><span>Services</span></h1>
-                <p>At Dental Garden, we believe every smile is unique and deserves the best care possible. Scroll down to discover some of our common treatments or click on "See Treatments" to learn about everything we can do for you at Dental Garden. Our experienced team is dedicated to delivering exceptional care, ensuring your comfort, and achieving outstanding results. Let's embark on your journey to a healthier, brighter smile. We are confident you'll find us to be the perfect dental practice for all your needs.</p>
+                <h1 style="font-size: 60px;">Treatments<br><span>Services</span></h1>
+                <p style="color: #c9fffc;">At Dental Garden, we believe every smile is unique and deserves the best care possible. Scroll down to discover some of our common treatments or click on "See Treatments" to learn about everything we can do for you at Dental Garden. Our experienced team is dedicated to delivering exceptional care, ensuring your comfort, and achieving outstanding results. Let's embark on your journey to a healthier, brighter smile. We are confident you'll find us to be the perfect dental practice for all your needs.</p>
                     <a href="HTML-treatments/treatmentTEST.html">
                     <button type="button"><span></span>
                     See Treatments
@@ -225,10 +237,11 @@ display: none;
 
     <section class="treatments">
         <h2 align="center">Common Treatments</h2>
+        <p align="center" style="color:white">If you'd like to read up on all the treatments we do at Dental Garden, you can press the "See Treatments" button above or click on one of the treatments below.</p>
         <br><br><br><br>
         <div class="treatment-cards">
             <div class="treatment-card1">
-                <img src="cucl.PNG" width="250" alt="Check up & Clean" class="cardimg">
+                <img src="../Images/cucl.PNG" width="250" alt="Check up & Clean" class="cardimg">
                 <a href="HTML-treatments/treatmentTEST.html">
                     <button type="button"><span></span>
                     Check & Clean
@@ -236,7 +249,7 @@ display: none;
                 <p>A dental check-up includes an oral examination, cleaning, and early problem detection. </p>
             </div>
             <div class="treatment-card2">
-                <img src="fillings-compos.jpg" width="250" alt="Fillings" class="cardimg">
+                <img src="../Images/fillings-compos.jpg" width="250" alt="Fillings" class="cardimg">
                 <a href="HTML-treatments/fillings.html">
                     <button type="button"><span></span>
                     Fillings
@@ -244,7 +257,7 @@ display: none;
                 <p>Dental fillings repair teeth and restore smiles by fixing cavities, cracks, or fractures.</p>
             </div>
             <div class="treatment-card3">
-                <img src="Invisible-vs-silver-braces.jpg" width="250" alt="Braces" class="cardimg">
+                <img src="../Images/Invisible-vs-silver-braces (1).jpg" width="250" alt="Braces" class="cardimg">
                 <a href="HTML-treatments/Br.html">
                     <button type="button"><span></span>
                     Braces
@@ -256,7 +269,7 @@ display: none;
     <section class="treatments">
         <div class="treatment-cards">
             <div class="treatment-card1">
-                <img src="teethWhiteactual.jpg" width="250" alt="Teeth Whitening" class="cardimg">
+                <img src="../Images/teethWhiteactual.jpg" width="250" alt="Teeth Whitening" class="cardimg">
                 <a href="HTML-treatments/TW.html">
                     <button type="button"><span></span>
                     Teeth Whitening
@@ -264,7 +277,7 @@ display: none;
                 <p>Brighten your smile with our professional teeth whitening services.</p>
             </div>
             <div class="treatment-card2">
-                <img src="vb.PNG" width="250" alt="Veneers & Bonding">
+                <img src="../Images/treatments/v.png" width="250" alt="Veneers & Bonding" style="border: 3px solid white; overflow: hidden;">
                 <a href="HTML-treatments/VB.html">
                     <button type="button"><span></span>
                     Veneers
@@ -272,7 +285,7 @@ display: none;
                 <p>Restore your smile with our high-quality composite veneers.</p>
             </div>
             <div class="treatment-card3">
-                <img src="tw.jpg" width="250" alt="Clear Aligners" class="cardimg2">
+                <img src="../Images/aligners.jpg" width="250" alt="Clear Aligners" class="cardimg2">
                 <a href="HTML-treatments/CA.html">
                     <button type="button"><span></span>
                     Clear Aligners
@@ -307,7 +320,7 @@ display: none;
             </div>
             <div class="core-value-card">
                 <h3>Eco-Friendly Practices</h3>
-                <p>We conscientiously minimize our environmental footprint through sustainable operations.</p>
+                <p>We conscientiously minimise our environmental footprint through sustainable operations.</p>
             </div>
             <div class="core-value-card">
                 <h3>Integrity</h3>
@@ -319,19 +332,6 @@ display: none;
             </div>
         </div>
     </section>
-<!-- 
-    <div class="testimonials">
-        <h2>What Our Patients Say</h2>
-        <div class="testimonial1">
-            <p>"A highly professional practice. The staff are kind and the environment is calming."</p>
-        </div>
-        <div class="testimonial2">
-            <p>"The staff was friendly, the facility was clean, and Dr. Frances’s expertise left me impressed. I highly recommend their services for anyone seeking top-notch dental care."</p>
-        </div>
-        <div class="testimonial3">
-            <p>"I have been so impressed with how professional and friendly Dr Winston Lee and Dr Frances are at Dental Garden. This is such a wonderful space and the care provided is really top quality."</p>
-        </div>
-    </div> -->
 
     <!-- .................................Footer Links................................... -->
     
